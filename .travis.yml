@@ -3,6 +3,6 @@ dist: xenial
 services:
   - docker
 before_script:
-  - sudo chmod +x run.sh
+  - sudo chmod +x $TRAVIS_BUILD_DIR/php-app/run.sh
 script:
   - docker run -v $TRAVIS_BUILD_DIR/php-app:/app gilbitron/php5.6-mysql
