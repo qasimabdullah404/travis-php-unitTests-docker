@@ -5,4 +5,4 @@ services:
 before_script:
   - sudo chmod +x run.sh
 script:
-  - docker run -v ./php-app:/app gilbitron/php5.6-mysql
+  - docker run -v $TRAVIS_BUILD_DIR/php-app:/app gilbitron/php5.6-mysql
